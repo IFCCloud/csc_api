@@ -1,0 +1,35 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name": "csc service",
+        "app_desc": "Cloud Supply Chain service endpoint",
+        "node_port": 3000,
+        "json_indentation": 4,
+        "database": "mongodb://localhost:27017/cloud",
+        "aad_authority" : "https://login.microsoftonline.com/",
+        "aad_tenant": "ifc.com.au",
+        "aad_audience": ["9da296fb-a39a-4cc7-8448-1cc8bae23eb9"]
+    },
+    "staging": {
+        "config_id": "staging",
+        "node_port": 3000,
+        "database" : "mongodb://cscapp:uXu%23%25d%40nJ%5EX%2AP5xDHP%5Ehm%3DVGkkG%25%257AsUm%23yMS%40qR3Nq3D%2B%5E%2A-62AE2M%21Uzx%2BPNn@csc-mondb-p-01.dev.cloudsupplychain.net.au:27017/csc?authSource=csc",
+        "aad_authority" : "https://login.microsoftonline.com/",
+        "aad_tenant": "ifc.com.au",
+        "aad_audience": ["9da296fb-a39a-4cc7-8448-1cc8bae23eb9"]
+    },
+    "production": {
+        "config_id": "production",
+        "node_port": 3000,
+        "database": "cloud-prod"
+    },
+    "environment" : "staging",
+    "route_model_map" : {
+        "seaports" : "SeaPort",
+        "airports" : "AirPort",
+        "accounts" : "Accounts",
+        "suburbs" : "Suburbs",
+        "filetemplate" : "FileUploadTemplate",
+        "container" : "Container"
+    }
+}
